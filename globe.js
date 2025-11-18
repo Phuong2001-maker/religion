@@ -171,6 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   regions.forEach((region) => {
     const icon = makeDotIcon(region.color);
     const marker = WE.marker([region.lat, region.lng], icon, 18, 18).addTo(earth);
+    marker.element.style.zIndex = "0";
 
     marker.element.addEventListener("mouseenter", (event) => {
       showTooltip(region, event, tooltip, canvasWrap);
