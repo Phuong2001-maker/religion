@@ -50,31 +50,71 @@
           <p>Di chuyển chuột hoặc chạm để bật tooltip. Sử dụng chú giải màu bên cạnh để đọc nhanh.</p>
         </div>
         <div class="card">
-          <h3>Hướng dẫn</h3>
+          <h3>Hướng dẫn vận hành</h3>
           <ul>
-            <li>Giữ và kéo để xoay quả địa cầu.</li>
-            <li>Di chuột qua marker để xem thông tin.</li>
-            <li>Nhấn vào marker để giữ tooltip.</li>
+            <li>Kéo giữ hoặc chạm để xoay quả địa cầu và đổi góc nhìn.</li>
+            <li>Cuộn/phóng để xác định vùng địa lý cần hiển thị rõ hơn.</li>
+            <li>Nhấn vào marker để mở tooltip chứa số liệu chuyên sâu.</li>
           </ul>
         </div>
       </section>
 
       <section class="section">
         <div class="map-panel">
-          <div class="canvas-wrap" id="globe-container" aria-label="Bản đồ 3D tôn giáo"></div>
+          <div class="canvas-wrap">
+            <div id="globe-container" aria-label="Bản đồ 3D tôn giáo"></div>
+            <div class="tooltip" role="status" aria-live="polite"></div>
+          </div>
           <div class="card">
-            <h3>Chú giải màu</h3>
-            <p>Màu sắc đại diện cho tôn giáo chiếm ưu thế theo vùng.</p>
-            <div class="legend">
-              <span><span class="dot" style="background:#f5a524"></span>Kitô giáo</span>
-              <span><span class="dot" style="background:#22d3ee"></span>Hồi giáo</span>
-              <span><span class="dot" style="background:#a78bfa"></span>Hindu/Phật giáo</span>
-              <span><span class="dot" style="background:#fb7185"></span>Đông Á</span>
-              <span><span class="dot" style="background:#34d399"></span>Bắc Mỹ đa hệ phái</span>
-              <span><span class="dot" style="background:#f97316"></span>Châu Phi hỗn hợp</span>
+            <h3>Chú giải màu & số liệu</h3>
+            <p>Khung màu thể hiện định vị truyền thống và số lượng tín đồ trong khu vực ưu thế.</p>
+            <div class="legend legend-detailed">
+              <div class="legend-entry">
+                <span class="dot" style="background:#f5a524"></span>
+                <div>
+                  <strong>Kitô giáo</strong>
+                  <p>Khoảng 2,3 tỉ tín đồ (Châu Âu, Bắc Mỹ, châu Mỹ Latinh, Nam Phi). Tập trung vào cộng đồng cởi mở & các thị trường toàn cầu.</p>
+                </div>
+              </div>
+              <div class="legend-entry">
+                <span class="dot" style="background:#22d3ee"></span>
+                <div>
+                  <strong>Hồi giáo</strong>
+                  <p>1,9 tỉ người (Trung Đông, Bắc Phi, Đông Nam Á). Thường giữ vị thế chính trị tại các quốc gia Vành đai Hồi giáo.</p>
+                </div>
+              </div>
+              <div class="legend-entry">
+                <span class="dot" style="background:#a78bfa"></span>
+                <div>
+                  <strong>Hindu & Phật giáo</strong>
+                  <p>1,2 tỉ Hindu và hơn 500 triệu Phật tử (Ấn Độ, Đông Nam Á, Nhật Bản). Hướng mạnh vào nghi lễ, tâm linh và kiến trúc thiêng.</p>
+                </div>
+              </div>
+              <div class="legend-entry">
+                <span class="dot" style="background:#fb7185"></span>
+                <div>
+                  <strong>Tín ngưỡng Đông Á & bản địa</strong>
+                  <p>Truyền thống Trung Hoa, Nhật Bản, và tín ngưỡng bản địa tại châu Á - Thái Bình Dương (hơn 300 triệu người).</p>
+                </div>
+              </div>
+              <div class="legend-entry">
+                <span class="dot" style="background:#34d399"></span>
+                <div>
+                  <strong>Kitô giáo chuyên biệt</strong>
+                  <p>Kitô hữu bảo thủ tại Bắc Mỹ và châu Phi với hơn 400 triệu thành viên, nổi bật bởi các giáo hội độc lập.</p>
+                </div>
+              </div>
+              <div class="legend-entry">
+                <span class="dot" style="background:#f97316"></span>
+                <div>
+                  <strong>Châu Phi hợp nhất & châu Đại Dương</strong>
+                  <p>Đông đảo cộng đồng Kitô + tín ngưỡng bản địa (tổng ~450 triệu người), nổi bật ở các vùng núi và đảo xa.</p>
+                </div>
+              </div>
             </div>
-            <div class="tooltip"></div>
-            <p class="meta">Dữ liệu minh họa, không nhằm thay thế nghiên cứu học thuật hay thống kê chính thức.</p>
+            <p class="meta">
+              Dữ liệu mang tính minh họa để giải thích xu hướng; không dùng làm tài liệu nghiên cứu chính thức.
+            </p>
           </div>
         </div>
       </section>
