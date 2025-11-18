@@ -143,6 +143,8 @@ const regions = [
   }
 ];
 
+const isMobileView = () => window.matchMedia("(max-width: 768px)").matches;
+
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("globe-container");
   if (!container || !window.WE) return;
@@ -203,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function showTooltip(region, event, tooltip, wrapper) {
   if (!tooltip || !wrapper) return;
+  tooltip.classList.toggle("tooltip--mobile", isMobileView());
   tooltip.innerHTML = `
     <strong>${region.name}</strong>
     <p><strong>Ưu thế:</strong> ${region.dominant}</p>
@@ -216,12 +219,19 @@ function showTooltip(region, event, tooltip, wrapper) {
 
 function positionTooltip(event, tooltip, wrapper) {
   if (!tooltip || !wrapper) return;
-  const pointer = event.touches ? event.touches[0] : event;
   const rect = wrapper.getBoundingClientRect();
+  if (isMobileView()) {
+    tooltip.style.transform = "translate(-50%, -4%)";
+    tooltip.style.left = `${rect.width / 2}px`;
+    tooltip.style.top = `${rect.height * 0.1}px`;
+    return;
+  }
+  const pointer = event.touches ? event.touches[0] : event;
   const left = Math.min(Math.max(pointer.clientX - rect.left, 40), rect.width - 40);
   const top = Math.min(Math.max(pointer.clientY - rect.top, 40), rect.height - 20);
   tooltip.style.left = `${left}px`;
   tooltip.style.top = `${top}px`;
+  tooltip.style.transform = "translate(-50%, -110%)";
 }
 
 function hideTooltip(tooltip) {
