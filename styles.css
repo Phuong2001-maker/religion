@@ -261,22 +261,87 @@ main {
 }
 
 .footer {
-  padding: 30px 6vw 40px;
-  background: rgba(0, 0, 0, 0.35);
-  border-top: 1px solid var(--border);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  padding: 48px 6vw 40px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(10, 15, 31, 0.95));
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-links {
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.footer-brand p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.footer-tags {
+  margin-top: 14px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
-.footer small {
+.footer-tags span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(245, 165, 36, 0.12);
+  color: #f5a524;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links strong,
+.footer-contact strong {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--accent);
+}
+
+.footer-contact p {
+  margin: 0;
   color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.footer-bottom {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-bottom span {
+  flex: 1;
+  min-width: 220px;
 }
 
 .search-bar {
