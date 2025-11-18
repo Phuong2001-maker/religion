@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bản đồ tôn giáo 3D | FaithAtlas Globe</title>
+    <meta
+      name="description"
+      content="Bản đồ 3D tương tác hiển thị tôn giáo chiếm ưu thế theo khu vực. Xoay quả địa cầu, chạm để xem mô tả ngắn."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">Faith<span>Atlas</span></div>
+        <nav class="nav-links">
+          <a href="index.html">Trang chủ</a>
+          <a href="religions.html">Tôn giáo</a>
+          <a href="map-3d.html">Bản đồ 3D</a>
+          <a href="timeline.html">Timeline</a>
+          <a href="symbols.html">Biểu tượng</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <button class="hamburger" aria-label="Mở menu">☰</button>
+      </div>
+      <div class="mobile-menu">
+        <a href="index.html">Trang chủ</a>
+        <a href="religions.html">Tôn giáo</a>
+        <a href="map-3d.html">Bản đồ 3D</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="symbols.html">Biểu tượng</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero fade-up">
+        <div>
+          <h1>Quả địa cầu tôn giáo 3D</h1>
+          <p>
+            Xoay, phóng to và nhấn vào marker để xem tôn giáo chiếm ưu thế theo khu vực lớn. Dữ liệu mang tính minh họa,
+            đủ để gợi ý xu hướng phân bố tín ngưỡng toàn cầu.
+          </p>
+          <p>Di chuyển chuột hoặc chạm để bật tooltip. Sử dụng chú giải màu bên cạnh để đọc nhanh.</p>
+        </div>
+        <div class="card">
+          <h3>Hướng dẫn</h3>
+          <ul>
+            <li>Giữ và kéo để xoay quả địa cầu.</li>
+            <li>Di chuột qua marker để xem thông tin.</li>
+            <li>Nhấn vào marker để giữ tooltip.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="map-panel">
+          <div class="canvas-wrap" id="globe-container" aria-label="Bản đồ 3D tôn giáo"></div>
+          <div class="card">
+            <h3>Chú giải màu</h3>
+            <p>Màu sắc đại diện cho tôn giáo chiếm ưu thế theo vùng.</p>
+            <div class="legend">
+              <span><span class="dot" style="background:#f5a524"></span>Kitô giáo</span>
+              <span><span class="dot" style="background:#22d3ee"></span>Hồi giáo</span>
+              <span><span class="dot" style="background:#a78bfa"></span>Hindu/Phật giáo</span>
+              <span><span class="dot" style="background:#fb7185"></span>Đông Á</span>
+              <span><span class="dot" style="background:#34d399"></span>Bắc Mỹ đa hệ phái</span>
+              <span><span class="dot" style="background:#f97316"></span>Châu Phi hỗn hợp</span>
+            </div>
+            <div class="tooltip"></div>
+            <p class="meta">Dữ liệu minh họa, không nhằm thay thế nghiên cứu học thuật hay thống kê chính thức.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <div class="logo">Faith<span>Atlas</span></div>
+        <small>Trải nghiệm 3D chạy trên Three.js CDN, không cần backend.</small>
+      </div>
+      <div class="footer-links">
+        <strong>Đi tiếp</strong>
+        <a href="timeline.html">Timeline</a>
+        <a href="religions.html">Danh sách tôn giáo</a>
+      </div>
+      <div class="footer-links">
+        <strong>Khác</strong>
+        <a href="symbols.html">Biểu tượng</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="main.js"></script>
+    <script src="globe.js"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách tôn giáo trên thế giới | FaithAtlas</title>
+    <meta
+      name="description"
+      content="Danh sách chi tiết các tôn giáo lớn: nguồn gốc, số tín đồ, triết lý chính và liên kết tới bài viết phân tích sâu."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">Faith<span>Atlas</span></div>
+        <nav class="nav-links">
+          <a href="index.html">Trang chủ</a>
+          <a href="religions.html">Tôn giáo</a>
+          <a href="map-3d.html">Bản đồ 3D</a>
+          <a href="timeline.html">Timeline</a>
+          <a href="symbols.html">Biểu tượng</a>
+          <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <button class="hamburger" aria-label="Mở menu">☰</button>
+      </div>
+      <div class="mobile-menu">
+        <a href="index.html">Trang chủ</a>
+        <a href="religions.html">Tôn giáo</a>
+        <a href="map-3d.html">Bản đồ 3D</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="symbols.html">Biểu tượng</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero fade-up">
+        <div>
+          <h1>Danh sách tôn giáo</h1>
+          <p>
+            Tìm kiếm và lọc nhanh các tôn giáo chính trên thế giới. Mỗi mục đi kèm nguồn gốc, số tín đồ ước tính và liên kết để đọc sâu hơn.
+            Dữ liệu được trình bày trung lập, khuyến khích bạn so sánh và đối thoại.
+          </p>
+          <p>
+            Sử dụng ô tìm kiếm hoặc chọn khu vực để thu hẹp kết quả. Nội dung hoàn toàn tĩnh, tối ưu SEO và dễ chia sẻ.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Gợi ý khám phá</h3>
+          <ul>
+            <li>Đọc tổng quan triết lý cốt lõi và thực hành chính.</li>
+            <li>Xem timeline để đặt tôn giáo vào dòng lịch sử.</li>
+            <li>Tra cứu biểu tượng phổ biến trong thư viện icon.</li>
+          </ul>
+          <div class="internal-links">
+            <a class="chip" href="map-3d.html">Bản đồ 3D</a>
+            <a class="chip" href="symbols.html">Biểu tượng</a>
+            <a class="chip" href="timeline.html">Lịch sử</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Lọc và tìm kiếm</h2>
+        </div>
+        <div class="card">
+          <div class="search-bar">
+            <input type="search" id="search-religion" placeholder="Tìm theo tên hoặc mô tả..." aria-label="Tìm tôn giáo" />
+            <select id="filter-region" aria-label="Lọc theo khu vực">
+              <option value="all">Tất cả khu vực</option>
+              <option value="Châu Á">Châu Á</option>
+              <option value="Châu Âu">Châu Âu</option>
+              <option value="Trung Đông">Trung Đông</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <h2>Danh sách tôn giáo (8+)</h2>
+            <p>Mô tả ngắn gọn triết lý chính và liên kết nội bộ đến chi tiết.</p>
+          </div>
+        </div>
+        <div id="religion-grid" class="grid grid-3"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <div class="logo">Faith<span>Atlas</span></div>
+        <small>FaithAtlas cung cấp thông tin trung lập, khuyến khích tôn trọng đa dạng tín ngưỡng.</small>
+      </div>
+      <div class="footer-links">
+        <strong>Khám phá</strong>
+        <a href="index.html">Trang chủ</a>
+        <a href="religion-detail.html">Chi tiết tôn giáo</a>
+        <a href="map-3d.html">Bản đồ 3D</a>
+      </div>
+      <div class="footer-links">
+        <strong>Nội dung</strong>
+        <a href="timeline.html">Timeline</a>
+        <a href="symbols.html">Biểu tượng</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
