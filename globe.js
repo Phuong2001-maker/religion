@@ -165,7 +165,8 @@ document.addEventListener("DOMContentLoaded", () => {
   WE.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors",
     minZoom: 1,
-    maxZoom: 5,
+    maxZoom: 8,
+    noWrap: true,
   }).addTo(earth);
 
   earth.setView([20, 0], 2.4);
